@@ -6,10 +6,10 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/users.js';
 import questionRoutes from './routes/Questions.js';
 import answerRoutes from './routes/Answers.js';
-// import connectDB from "./connectMongoDb.js";
+import connectDB from './connectMongoDb.js';
 
 dotenv.config();
-// connectDB();
+connectDB();
 const app = express();
 app.use(express.json({ limit: '30mb', extended: true }));
 app.use(express.urlencoded({ limit: '30mb', extended: true }));
